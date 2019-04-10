@@ -1,0 +1,87 @@
+/*
+Demonstrates the grid's ability for items to be placed in specific grid areas.
+*/
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body{
+  background-image:
+    linear-gradient(to bottom right, green, yellow);
+  font-family: Verdana, sans-serif;
+  padding: 10px;
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 90%;
+  //min-width: 320px;
+  margin: auto;
+
+}
+
+img{
+  width: 100%;
+  min-width: 200px;
+  height: auto;
+  //transform: rotate(7deg);
+  box-shadow: 10px 5px 5px black;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: minmax 1fr 1fr max-content;
+  grid-gap: 10px;
+  min-width: 200px;
+  max-width: 100%;
+  height: auto;
+}
+.grid-items{
+  box-shadow: 5px 5px 5px black;
+  padding: 5px;
+  text-align: center
+}
+
+.subject{
+  grid-row: 1;
+  grid-column: 1 / span 4;
+  //text-align: left;
+}
+.top-image{
+  //grid-row: 2;
+  grid-column: 1 / 5;
+}
+
+.date-location{
+  //grid-row: 2;
+  grid-column: 1 / 5;
+  text-align: left;
+  //align-self: center;
+}
+
+
+#date, address{
+  background-color: yellowgreen;
+  box-shadow: 5px 5px 5px black;
+  padding: 5px;
+  font-size: 2vw;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.description{
+  //grid-row: 4;
+  grid-column: 1 / 5;
+  text-align: justify;
+}
+.note{
+  //grid-row: 5;
+  grid-column: 1/2;
+  font-family: cursive, sans-serif;
+
+}
+.aside{
+  //grid-row: 5;
+  grid-column: 2/5;
+  font-family: cursive, sans-serif;
+
+}
